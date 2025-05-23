@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Upload, Brain, RefreshCw, Download } from "lucide-react";
 
@@ -7,27 +6,24 @@ const HowItWorks = () => {
     {
       icon: <Upload className="w-10 h-10 text-blue-500" />,
       title: "Upload Excel or Connect ERP",
-      description: "Drag-n-drop forecasting templates or connect Odoo, Microsoft, or Netsuite.",
-      step: "01"
+      description:
+        "Drag-n-drop forecasting templates or connect Odoo, Microsoft, or Netsuite.",
+      step: "01",
     },
     {
       icon: <Brain className="w-10 h-10 text-purple-500" />,
       title: "Get Smart Forecasts",
-      description: "Auto-generated demand, reorder points, and delivery schedule plans.",
-      step: "02"
-    },
-    {
-      icon: <RefreshCw className="w-10 h-10 text-green-500" />,
-      title: "Sync & Align Inventory",
-      description: "AI flags mismatches between ERP and warehouse actuals.",
-      step: "03"
+      description:
+        "Auto-generated demand, reorder points, and delivery schedule plans.",
+      step: "02",
     },
     {
       icon: <Download className="w-10 h-10 text-orange-500" />,
       title: "Export, Share, Act",
-      description: "Download reports, share with your team, or push back to ERP.",
-      step: "04"
-    }
+      description:
+        "Download reports, share with your team, or push back to ERP.",
+      step: "03",
+    },
   ];
 
   return (
@@ -41,8 +37,8 @@ const HowItWorks = () => {
             Four simple steps to transform your supply chain management
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <Card className="h-full hover:shadow-lg transition-all duration-300 border-2 border-gray-100 hover:border-blue-200">
@@ -51,8 +47,12 @@ const HowItWorks = () => {
                     {step.step}
                   </div>
                   <div className="mb-6 flex justify-center">{step.icon}</div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">{step.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
                 </CardContent>
               </Card>
               {index < steps.length - 1 && (

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, MessageSquare } from "lucide-react";
@@ -6,15 +5,15 @@ import { CheckCircle, ArrowRight, MessageSquare } from "lucide-react";
 const TrustSection = () => {
   const targetTeams = [
     "Run lean ops and can't afford bulk-buying",
-    "Work with seasonal demand and tight margins", 
-    "Need better planning, fast — not another 6-month ERP setup"
+    "Work with seasonal demand and tight margins",
+    "Need better planning, fast — not another 6-month ERP setup",
   ];
 
   const industries = [
     "Synthetic Fuels & Sustainable Manufacturing",
     "Specialty Automotive & Motorsport",
     "GreenTech Suppliers",
-    "High-Customization Manufacturing"
+    "High-Customization Manufacturing",
   ];
 
   return (
@@ -24,10 +23,11 @@ const TrustSection = () => {
           {/* Join the Beta section */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              🔒 Join the Beta – Help Shape the Future of SME Supply Planning
+              🛠️ Join the Beta – Help Shape the Future of SME Supply Planning
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built for SMEs with complex supply chains but no time or budget for heavy ERP.
+              Built for SMEs with complex supply chains but no time or budget
+              for heavy ERP.
             </p>
           </div>
 
@@ -38,13 +38,17 @@ const TrustSection = () => {
                 👋 Built by a Founder Who's Lived the Problem
               </h2>
               <blockquote className="text-lg text-gray-700 italic mb-6 leading-relaxed">
-                "I talked to dozens of ops managers buried in spreadsheets and drowning in ERP complexity. That's why I built LeanChain—to make supply planning smarter, not harder."
+                "I talked to dozens of ops managers buried in spreadsheets and
+                drowning in ERP complexity. That's why I built LeanChain—to make
+                supply planning smarter, not harder."
               </blockquote>
               <p className="text-gray-600 text-right font-semibold">
                 — Pankaj, Founder & Engineer
               </p>
               <div className="mt-6 bg-blue-50 p-4 rounded-lg">
-                <p className="text-blue-700 text-sm font-medium">Backed by insights from 50+ SME ops leaders</p>
+                <p className="text-blue-700 text-sm font-medium">
+                  Backed by insights from 50+ SME ops leaders
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -58,15 +62,22 @@ const TrustSection = () => {
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-700">Smarter supply chain tracking built for small & mid-sized manufacturers</p>
+                  <p className="text-lg text-gray-700">
+                    Smarter supply chain tracking built for small & mid-sized
+                    manufacturers
+                  </p>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-700">Say goodbye to ERP headaches and endless Excel firefights</p>
+                  <p className="text-lg text-gray-700">
+                    Say goodbye to ERP headaches and endless Excel firefights
+                  </p>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-700">Your input will directly shape the product roadmap</p>
+                  <p className="text-lg text-gray-700">
+                    Your input will directly shape the product roadmap
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -79,14 +90,23 @@ const TrustSection = () => {
                 🧪 Help Us Build What You Really Need
               </h2>
               <p className="text-lg text-gray-700 mb-6 text-center">
-                We're running short, 15-minute interviews with SME operations leaders.<br />
-                <span className="font-semibold">Your feedback = real impact + free lifetime discount.</span>
+                We're running short, 15-minute interviews with SME operations
+                leaders.
+                <br />
+                <span className="font-semibold">
+                  Your feedback = real impact + free lifetime discount.
+                </span>
               </p>
               <div className="text-center mt-8">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
-                  onClick={() => window.open('https://calendly.com/pankaj4u4m/30min', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      "https://calendly.com/pankaj4u4m/30min",
+                      "_blank"
+                    )
+                  }
                 >
                   <MessageSquare className="mr-2 w-5 h-5" />
                   Claim Your Early Access

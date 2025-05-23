@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Upload, Brain, RefreshCw, Download } from "lucide-react";
 
@@ -6,21 +5,21 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: <Upload className="w-10 h-10 text-blue-500" />,
-      title: "① Upload Excel or Connect ERP",
+      title: "Upload Excel or Connect ERP",
       description:
         "Drag & drop your spreadsheets or connect your ERP in minutes",
       step: "01",
     },
     {
       icon: <Brain className="w-10 h-10 text-purple-500" />,
-      title: "② Get Smart Forecasts",
+      title: "Get Smart Forecasts",
       description:
         "AI auto-generates demand plans, reorder points & PO suggestions",
       step: "02",
     },
     {
       icon: <Download className="w-10 h-10 text-orange-500" />,
-      title: "③ Export, Share, Act",
+      title: "Export, Share, Act",
       description:
         "Download reports, share with your team, or sync back to your ERP",
       step: "03",

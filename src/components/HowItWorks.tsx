@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Upload, Brain, RefreshCw, Download } from "lucide-react";
 
@@ -5,23 +6,23 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: <Upload className="w-10 h-10 text-blue-500" />,
-      title: "Upload Excel or Connect ERP",
+      title: "① Upload Excel or Connect ERP",
       description:
-        "Drag-n-drop forecasting templates or connect Odoo, Microsoft, or Netsuite.",
+        "Drag & drop your spreadsheets or connect your ERP in minutes",
       step: "01",
     },
     {
       icon: <Brain className="w-10 h-10 text-purple-500" />,
-      title: "Get Smart Forecasts",
+      title: "② Get Smart Forecasts",
       description:
-        "Auto-generated demand, reorder points, and delivery schedule plans.",
+        "AI auto-generates demand plans, reorder points & PO suggestions",
       step: "02",
     },
     {
       icon: <Download className="w-10 h-10 text-orange-500" />,
-      title: "Export, Share, Act",
+      title: "③ Export, Share, Act",
       description:
-        "Download reports, share with your team, or push back to ERP.",
+        "Download reports, share with your team, or sync back to your ERP",
       step: "03",
     },
   ];
@@ -31,10 +32,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            ⚙️ How It Works
+            🧠 How It Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Four simple steps to transform your supply chain management
+            Three simple steps to transform your supply chain management
           </p>
         </div>
 

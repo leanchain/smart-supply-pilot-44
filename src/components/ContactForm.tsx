@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -127,7 +128,7 @@ const ContactForm = () => {
               htmlFor="role"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Role
+              Your Role
             </label>
             <select
               id="role"
@@ -150,7 +151,7 @@ const ContactForm = () => {
             size="lg"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold rounded-lg"
           >
-            🔒 Join Beta Access
+            Get Started 
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </form>

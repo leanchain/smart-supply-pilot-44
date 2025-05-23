@@ -38,14 +38,14 @@ const DemoSlides = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            📊 See LeanChain in Action
+            🎥 Watch It in Action
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Watch how easy it is to transform your supply planning in minutes
+            2-minute demo: See how fast LeanChain transforms your supply planning
           </p>
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg">
             <Play className="mr-2 w-5 h-5" />
-            Watch Demo (2 min)
+            👉 Watch Demo
           </Button>
         </div>
         
@@ -71,7 +71,7 @@ const DemoSlides = () => {
         {/* Early User Testimonials */}
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Early User Feedback
+            💬 Early User Feedback
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((item, index) => (

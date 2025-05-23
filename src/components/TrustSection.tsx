@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, MessageSquare } from "lucide-react";
@@ -23,24 +24,65 @@ const TrustSection = () => {
           {/* Join the Beta section */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              🛠️ Join the Beta – Help Shape the Future of SME Supply Planning
+              🧪 Join the Beta – Shape the Future of SME Supply Planning
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built for SMEs with complex supply chains but no time or budget
-              for heavy ERP.
+              Built for SMEs with complex supply chains and limited time for ERP bloat.
             </p>
           </div>
+
+          {/* Benefits Card */}
+          <Card className="mb-12 shadow-xl border-0">
+            <CardContent className="p-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+                ✅ Why Join?
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <p className="text-lg text-gray-700">
+                    Be one of our first 10 pilot customers
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <p className="text-lg text-gray-700">
+                    Get white-glove onboarding + personalized insights
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <p className="text-lg text-gray-700">
+                    Influence our roadmap
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                  onClick={() => {
+                    const contactFormSection = document.querySelector(".contact-form-section");
+                    if (contactFormSection) {
+                      contactFormSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  👉 Claim Your Spot
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Founder quote section */}
           <Card className="mb-12 shadow-xl border-0">
             <CardContent className="p-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
-                👋 Built by a Founder Who's Lived the Problem
+                👋 From a Founder Who's Lived the Pain
               </h2>
               <blockquote className="text-lg text-gray-700 italic mb-6 leading-relaxed">
-                "I talked to dozens of ops managers buried in spreadsheets and
-                drowning in ERP complexity. That's why I built LeanChain—to make
-                supply planning smarter, not harder."
+                "I spoke with 50+ ops leaders juggling spreadsheets and fighting ERP complexity. That's why I built LeanChain — to make planning smarter, not harder."
               </blockquote>
               <p className="text-gray-600 text-right font-semibold">
                 — Pankaj, Founder & Engineer
@@ -53,48 +95,17 @@ const TrustSection = () => {
             </CardContent>
           </Card>
 
-          {/* Built for teams section */}
-          <Card className="mb-12 shadow-xl border-0">
-            <CardContent className="p-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-                ✅ Why Join?
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-700">
-                    Smarter supply chain tracking built for small & mid-sized
-                    manufacturers
-                  </p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-700">
-                    Say goodbye to ERP headaches and endless Excel firefights
-                  </p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <p className="text-lg text-gray-700">
-                    Your input will directly shape the product roadmap
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Help us build section */}
           <Card className="shadow-xl border-0">
             <CardContent className="p-10">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-                🧪 Help Us Build What You Really Need
+                🗓️ Want to Help Shape It?
               </h2>
               <p className="text-lg text-gray-700 mb-6 text-center">
-                We're running short, 15-minute interviews with SME operations
-                leaders.
+                We're booking 15-minute interviews with SME operations leaders.
                 <br />
                 <span className="font-semibold">
-                  Your feedback = real impact + free lifetime discount.
+                  🎁 Your feedback = lifetime discount + early access
                 </span>
               </p>
               <div className="text-center mt-8">
@@ -109,7 +120,7 @@ const TrustSection = () => {
                   }
                 >
                   <MessageSquare className="mr-2 w-5 h-5" />
-                  Claim Your Early Access
+                  Schedule a Call
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>

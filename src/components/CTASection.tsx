@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Star } from "lucide-react";
+import { MessageCircle, Star, ArrowRight } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const CTASection = () => {
@@ -11,12 +12,24 @@ const CTASection = () => {
           {/* Main CTA */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              📣 Get Early Access
+              📥 Apply for Early Access
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Be one of our first 10 pilot customers — get onboarding support,
-              insights reports, and influence our roadmap.
+              Be one of the first 10 customers and help shape LeanChain.
             </p>
+            <Button
+              size="lg"
+              className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 mb-8"
+              onClick={() => {
+                const contactFormSection = document.querySelector(".contact-form-section");
+                if (contactFormSection) {
+                  contactFormSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </div>
 
           {/* Contact Form */}
@@ -54,11 +67,11 @@ const CTASection = () => {
                 </div>
                 <div className="flex items-center justify-center space-x-2 text-blue-100">
                   <MessageCircle className="w-5 h-5" />
-                  <span>Booking interviews with SME ops leaders</span>
+                  <span>15-min call = free lifetime discount</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2 text-blue-100">
                   <Star className="w-5 h-5" />
-                  <span>15-min call = free lifetime discount</span>
+                  <span>Booking interviews with SME ops leaders</span>
                 </div>
               </div>
               <Button

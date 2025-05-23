@@ -22,6 +22,17 @@ const DemoSlides = () => {
     }
   ];
 
+  const testimonials = [
+    {
+      quote: "Finally, something that works with our Excel sheets instead of trying to replace them!",
+      name: "Operations Manager, GreenTech Manufacturing"
+    },
+    {
+      quote: "Saved us from constant stockouts during our seasonal peaks when we couldn't forecast demand properly.",
+      name: "Supply Chain Lead, Automotive Parts"
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container mx-auto px-6">
@@ -38,7 +49,7 @@ const DemoSlides = () => {
           </Button>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {demoSteps.map((step, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
               <CardContent className="p-8 text-center">
@@ -55,6 +66,24 @@ const DemoSlides = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Early User Testimonials */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Early User Feedback
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {testimonials.map((item, index) => (
+              <Card key={index} className="border-0 shadow-lg bg-white/80">
+                <CardContent className="p-6">
+                  <div className="text-2xl text-blue-500 mb-4">❝</div>
+                  <p className="text-gray-700 italic mb-4">{item.quote}</p>
+                  <p className="text-gray-500 text-sm font-medium">{item.name}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

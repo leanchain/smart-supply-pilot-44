@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Upload, Brain, Sync, Download } from "lucide-react";
+import { Upload, Brain, RefreshCw, Download } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
@@ -17,7 +17,7 @@ const HowItWorks = () => {
       step: "02"
     },
     {
-      icon: <Sync className="w-10 h-10 text-green-500" />,
+      icon: <RefreshCw className="w-10 h-10 text-green-500" />,
       title: "Sync & Align Inventory",
       description: "AI flags mismatches between ERP and warehouse actuals.",
       step: "03"

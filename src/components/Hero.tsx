@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Upload, TrendingUp, Sync } from "lucide-react";
+import { ArrowRight, Upload, TrendingUp, RefreshCw } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -43,7 +43,7 @@ const Hero = () => {
               <span className="text-gray-700">AI Forecasts</span>
             </div>
             <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm">
-              <Sync className="w-5 h-5 text-purple-500" />
+              <RefreshCw className="w-5 h-5 text-purple-500" />
               <span className="text-gray-700">ERP Sync</span>
             </div>
           </div>

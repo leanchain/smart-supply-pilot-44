@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Star } from "lucide-react";
@@ -15,12 +14,13 @@ const CTASection = () => {
               📣 Get Early Access
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Be one of our first 10 pilot customers — get onboarding support, insights reports, and influence our roadmap.
+              Be one of our first 10 pilot customers — get onboarding support,
+              insights reports, and influence our roadmap.
             </p>
           </div>
 
           {/* Contact Form */}
-          <div className="mb-16">
+          <div className="mb-16 contact-form-section" id="contact-form">
             <ContactForm />
           </div>
 
@@ -31,7 +31,9 @@ const CTASection = () => {
                 👋 From a Founder Who's Been There
               </h3>
               <blockquote className="text-lg text-blue-100 italic text-center mb-6 leading-relaxed">
-                "After speaking to dozens of ops managers relying on spreadsheets and fighting ERP complexity, I built LeanChain to make supply planning smarter, not harder."
+                "After speaking to dozens of ops managers relying on
+                spreadsheets and fighting ERP complexity, I built LeanChain to
+                make supply planning smarter, not harder."
               </blockquote>
               <p className="text-blue-200 text-center font-semibold">
                 — Pankaj, Founder & Engineer
@@ -59,11 +61,13 @@ const CTASection = () => {
                   <span>15-min call = free lifetime discount</span>
                 </div>
               </div>
-              <Button 
-                variant="outline" 
-                size="lg" 
+              <Button
+                variant="outline"
+                size="lg"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-200"
-                onClick={() => window.open('https://calendly.com/pankaj4u4m/30min', '_blank')}
+                onClick={() =>
+                  window.open("https://calendly.com/pankaj4u4m/30min", "_blank")
+                }
               >
                 Schedule a Chat
               </Button>

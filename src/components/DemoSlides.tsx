@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, FileText, BarChart3, CheckCircle } from "lucide-react";
+import { Play, FileText, BarChart3 } from "lucide-react";
 
 const DemoSlides = () => {
   const demoSteps = [
@@ -14,11 +14,6 @@ const DemoSlides = () => {
       title: "AI Analysis", 
       description: "Get instant demand forecasts and purchase recommendations",
       icon: <BarChart3 className="w-12 h-12 text-purple-500" />
-    },
-    {
-      title: "Smart Recommendations",
-      description: "Export reports or sync directly back to your ERP system",
-      icon: <CheckCircle className="w-12 h-12 text-green-500" />
     }
   ];
 
@@ -38,7 +33,7 @@ const DemoSlides = () => {
           </Button>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {demoSteps.map((step, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
               <CardContent className="p-8 text-center">

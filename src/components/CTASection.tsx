@@ -1,7 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, MessageCircle, Star } from "lucide-react";
+import { MessageCircle, Star } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const CTASection = () => {
   return (
@@ -16,10 +17,11 @@ const CTASection = () => {
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Be one of our first 10 pilot customers — get onboarding support, insights reports, and influence our roadmap.
             </p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 text-xl font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
-              🔒 Join Beta Access
-              <ArrowRight className="ml-2 w-6 h-6" />
-            </Button>
+          </div>
+
+          {/* Contact Form */}
+          <div className="mb-16">
+            <ContactForm />
           </div>
 
           {/* Founder section */}
@@ -29,10 +31,10 @@ const CTASection = () => {
                 👋 From a Founder Who's Been There
               </h3>
               <blockquote className="text-lg text-blue-100 italic text-center mb-6 leading-relaxed">
-                "After speaking to dozens of ops managers relying on spreadsheets and fighting ERP complexity, I built this tool to make supply planning smarter, not harder."
+                "After speaking to dozens of ops managers relying on spreadsheets and fighting ERP complexity, I built LeanChain to make supply planning smarter, not harder."
               </blockquote>
               <p className="text-blue-200 text-center font-semibold">
-                — [Your Name], Founder & Engineer
+                — Pankaj, Founder & Engineer
               </p>
             </CardContent>
           </Card>
@@ -53,11 +55,16 @@ const CTASection = () => {
                   <span>Booking interviews with SME ops leaders</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2 text-blue-100">
-                  <ArrowRight className="w-5 h-5" />
+                  <Star className="w-5 h-5" />
                   <span>15-min call = free lifetime discount</span>
                 </div>
               </div>
-              <Button variant="outline" size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-200">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-200"
+                onClick={() => window.open('https://calendly.com/pankaj4u4m/30min', '_blank')}
+              >
                 Schedule a Chat
               </Button>
             </CardContent>

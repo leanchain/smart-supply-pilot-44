@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingDown, Factory, Settings, ArrowRight } from "lucide-react";
+import { TrendingDown, Settings, ArrowRight } from "lucide-react";
 
 const Features = () => {
   const features = [
@@ -9,15 +9,8 @@ const Features = () => {
       title: "📉 Inaccurate Forecasts",
       solutions: [
         "Get demand forecasts from your existing Excel sheets",
-        "Seasonality & lead times handled with AI assistance"
-      ]
-    },
-    {
-      icon: <Factory className="w-8 h-8 text-orange-500" />,
-      title: "🏭 Inventory Mismatch", 
-      solutions: [
-        "ERP shows X, warehouse shows X–D?",
-        "Reconcile with automated sync & alerts"
+        "Seasonality & lead times handled with AI assistance",
+        "Reduce stockouts and overstock by up to 40%"
       ]
     },
     {
@@ -25,7 +18,8 @@ const Features = () => {
       title: "🛠️ Heavy ERP Systems",
       solutions: [
         "Don't replace it — enhance it",
-        "One-click templates for planning & costing"
+        "One-click templates for planning & costing",
+        "Connect to Odoo, SAP, NetSuite, and more"
       ]
     }
   ];
@@ -35,14 +29,14 @@ const Features = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            🔍 What It Solves
+            🔍 What LeanChain Solves
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transform your supply chain challenges into competitive advantages with AI-powered insights
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
               <CardContent className="p-8">

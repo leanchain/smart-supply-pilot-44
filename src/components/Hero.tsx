@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, TrendingUp, RefreshCw } from "lucide-react";
+import Logo from "./Logo";
 
 const Hero = () => {
   return (
@@ -13,6 +14,11 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <Logo size="lg" />
+          </div>
+          
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
@@ -54,7 +60,12 @@ const Hero = () => {
               🔒 Join Beta Access
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-lg border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-all duration-200">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8 py-4 text-lg font-semibold rounded-lg border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-all duration-200"
+              onClick={() => window.open('https://calendly.com/pankaj4u4m/30min', '_blank')}
+            >
               Schedule a Chat
             </Button>
           </div>

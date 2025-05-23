@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 
@@ -17,7 +16,7 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Built for teams section */}

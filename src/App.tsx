@@ -3,9 +3,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import { initGA } from "./lib/analytics";
 
 // Product pages
 import Products from "./pages/Products";
@@ -24,41 +27,49 @@ import Cookies from "./pages/Cookies";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
-          <div className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Index />} />
+const App = () => {
+  useEffect(() => {
+    // Initialize Google Analytics when the app loads
+    initGA();
+  }, []);
 
-              {/* Product Routes */}
-              <Route path="/products" element={<Products />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/agents" element={<Agents />} />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <GoogleAnalytics />
+          <div className="flex flex-col min-h-screen">
+            <div className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Index />} />
 
-              {/* Company Routes */}
-              <Route path="/about" element={<About />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/contact" element={<Contact />} />
+                {/* Product Routes */}
+                <Route path="/products" element={<Products />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/agents" element={<Agents />} />
 
-              {/* Legal Routes */}
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/imprint" element={<Imprint />} />
-              <Route path="/cookies" element={<Cookies />} />
+                {/* Company Routes */}
+                <Route path="/about" element={<About />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/contact" element={<Contact />} />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+                {/* Legal Routes */}
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/imprint" element={<Imprint />} />
+                <Route path="/cookies" element={<Cookies />} />
+
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

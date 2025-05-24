@@ -1,14 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, TrendingUp, RefreshCw } from "lucide-react";
 import Logo from "./Logo";
+import { trackButtonClick, trackExternalLink } from "@/lib/analytics";
 
 const Hero = () => {
   const scrollToContactForm = () => {
+    // Track the button click
+    trackButtonClick("Claim Early Access", "Hero");
+
     // Find the contact form section
     const contactFormSection = document.querySelector(".contact-form-section");
     if (contactFormSection) {
       contactFormSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleScheduleCall = () => {
+    // Track external link click
+    trackExternalLink("https://calendly.com/pankaj4u4m/30min");
+    trackButtonClick("Schedule a Call", "Hero");
+
+    window.open("https://calendly.com/pankaj4u4m/30min", "_blank");
   };
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
@@ -72,9 +84,7 @@ const Hero = () => {
               variant="outline"
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-lg border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-all duration-200"
-              onClick={() =>
-                window.open("https://calendly.com/pankaj4u4m/30min", "_blank")
-              }
+              onClick={handleScheduleCall}
             >
               Schedule a Call
             </Button>

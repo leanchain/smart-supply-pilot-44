@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Mail, User, Building } from "lucide-react";
+import { trackFormSubmission } from "@/lib/analytics";
 
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -26,6 +26,8 @@ const ContactForm = () => {
       body: searchParams.toString(),
     })
       .then(() => {
+        // Track successful form submission
+        trackFormSubmission("Beta Access Form");
         setIsSubmitted(true);
       })
       .catch((error) => {
@@ -151,7 +153,7 @@ const ContactForm = () => {
             size="lg"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold rounded-lg"
           >
-            Get Started 
+            Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </form>

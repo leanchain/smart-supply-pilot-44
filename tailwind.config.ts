@@ -107,5 +107,4 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
-  safelist: ["border-border"],
 } satisfies Config;

@@ -25,7 +25,7 @@ const CTASection = () => {
           </div>
 
           {/* Founder section */}
-          <Card className="mb-12 bg-white/10 backdrop-blur-sm border-white/20">
+          <Card className="mb-12 bg-white/10 backdrop-blur-xs border-white/20">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-4 text-center">
                 👋 From a Founder Who's Been There
@@ -42,7 +42,7 @@ const CTASection = () => {
           </Card>
 
           {/* Secondary CTA */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+          <Card className="bg-white/10 backdrop-blur-xs border-white/20">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-6">
                 🧪 Want to Help Shape It?

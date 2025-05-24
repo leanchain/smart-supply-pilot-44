@@ -51,7 +51,7 @@ const ContactForm = () => {
   }
 
   return (
-    <Card className="max-w-md mx-auto shadow-lg">
+    <Card className="max-w-md mx-auto shadow-lg bg-white">
       <CardContent className="p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
           Get Early Access

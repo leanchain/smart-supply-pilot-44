@@ -56,15 +56,15 @@ const Hero = () => {
 
           {/* Feature highlights - UPDATED */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
-            <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+            <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-xs">
               <Upload className="w-5 h-5 text-blue-500" />
               <span className="text-gray-700">Excel Upload</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+            <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-xs">
               <TrendingUp className="w-5 h-5 text-green-500" />
               <span className="text-gray-700">AI Forecasts</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+            <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-xs">
               <RefreshCw className="w-5 h-5 text-purple-500" />
               <span className="text-gray-700">ERP Sync</span>
             </div>

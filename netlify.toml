@@ -1,11 +1,12 @@
 [build]
   publish = "dist"
   command = "npm run build"
+  environment = { SECRETS_SCAN_OMIT_KEYS = "VITE_GA_MEASUREMENT_ID" }
 
 [forms]
   [forms.beta-access]
     name = "beta-access"
-    
+
 [dev]
   framework = "vite"
 
